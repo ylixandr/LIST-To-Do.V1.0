@@ -1,0 +1,39 @@
+﻿<Window x:Class="LIST_To_Do.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LIST_To_Do"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <Button Content="Learning" Margin="5" Height="45" Width="100"   />
+                <Button Content="Books" Margin="5" Height="45" Width="100" Command="{Binding BookPageCommand}" />
+                <Button Content="Tasks" Margin="5" Height="45" Width="100" Command="{Binding TaskPageCommand}"  />
+                <Button Content="Ideas" Margin="5" Height="45" Width="100" Command="{Binding IdeaPageCommand}"  />
+                <Button Command="{Binding TaskPageCommand}" Background="Transparent" Height="47">
+                    <Image Width="46" Height="29" Source="D:\programm\LIST-To-Do\plus.png"  />
+                </Button>
+
+
+            </StackPanel>
+
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="167*"/>
+                <RowDefinition Height="50*"/>
+            </Grid.RowDefinitions>
+            <Frame Background="Gray"
+                  Content = "{Binding CurrentPage}" NavigationUIVisibility="Hidden" Grid.RowSpan="2"/>
+        </Grid>
+    </Grid>
+
+</Window>
