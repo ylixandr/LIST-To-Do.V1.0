@@ -101,6 +101,7 @@
     </ApplicationDefinition>
     <Compile Include="Model\Book.cs" />
     <Compile Include="Model\Ideas.cs" />
+    <Compile Include="PageTemplateSelector.cs" />
     <Compile Include="ViewModel\BookPageViewModel.cs" />
     <Compile Include="ViewModel\IdeaPageViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />

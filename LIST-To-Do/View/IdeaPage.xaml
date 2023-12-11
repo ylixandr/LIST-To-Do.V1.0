@@ -10,7 +10,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="IdeaPage">
 
-    <Grid Background="White">
+    <Grid >
+        
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -20,7 +21,8 @@
 
 
 
-            <Grid Grid.Column="0" Background="Gray">
+            <Grid Grid.Column="0" >
+                
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
@@ -29,6 +31,7 @@
 
                 <DataGrid Margin="5" Grid.Row="1" ItemsSource="{Binding Ideas,UpdateSourceTrigger=PropertyChanged,Mode=OneWay}"
                       AutoGenerateColumns="False" IsReadOnly="True" SelectedItem="{Binding SelectedIdea}">
+                   
 
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Width="auto" Binding="{Binding IdIdea}"/>
@@ -44,17 +47,17 @@
 
 
             <Grid Grid.Column="1"  >
-                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" >
                     <StackPanel Visibility="{Binding EditPanelVisability}">
                         <StackPanel Orientation="Vertical" VerticalAlignment="Center" DataContext="{Binding SelectedIdea}">
-                        <TextBox materialDesign:HintAssist.HelperText="Id" MinWidth="100" IsReadOnly="True" 
+                        <TextBox materialDesign:HintAssist.HelperText="Id" MinWidth="100" IsReadOnly="True" Foreground="White"
                          Text="{Binding IdIdea, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
-                        <TextBox materialDesign:HintAssist.HelperText="Idea" MinWidth="100" Margin="10"
+                            <TextBox materialDesign:HintAssist.HelperText="Idea" MinWidth="100" Margin="10" Foreground="White"
                          Text="{Binding Idea, UpdateSourceTrigger=PropertyChanged}"/>
 
-                        
 
-                        <DatePicker materialDesign:HintAssist.HelperText="Date" MinWidth="100"  Margin="10"
+
+                            <DatePicker materialDesign:HintAssist.HelperText="Date" MinWidth="100"  Margin="10" Foreground="White"
                          Text="{Binding DateIdea, UpdateSourceTrigger=PropertyChanged}"/>
 
                     </StackPanel>

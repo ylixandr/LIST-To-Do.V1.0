@@ -18,7 +18,7 @@ namespace LIST_To_Do.ViewModel
         private TaskViewModel taskViewModel;
        
         private Page bookPage;
-        private BooksDbContext booksDbContext;
+       
         private BookPageViewModel bookPageViewModel;
 
         private Page ideaPage;
@@ -36,7 +36,7 @@ namespace LIST_To_Do.ViewModel
         public MainWindowViewModel()
         {
             dbContext = new TaskDbContext();
-            booksDbContext = new BooksDbContext();
+           
             LoadPages();
         }
 

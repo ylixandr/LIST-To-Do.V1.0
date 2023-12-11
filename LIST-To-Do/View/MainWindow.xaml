@@ -7,20 +7,24 @@
         xmlns:local="clr-namespace:LIST_To_Do"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\User\source\repos\LIST-To-Do.V1.0\fon1.jpg" />
+    </Window.Background>
+
+    <Grid  >
+        
+        
+        <Grid.ColumnDefinitions >
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0">
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-                <Button Content="Learning" Margin="5" Height="45" Width="100"   />
-                <Button Content="Books" Margin="5" Height="45" Width="100" Command="{Binding BookPageCommand}" />
-                <Button Content="Tasks" Margin="5" Height="45" Width="100" Command="{Binding TaskPageCommand}"  />
+        <Grid Grid.Column="0" >
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" >
+                
+                <Button Content="Books" Margin="5,5,5,20" Height="45" Width="100" Command="{Binding BookPageCommand}" />
+                <Button Content="Tasks" Margin="5,5,5,20" Height="45" Width="100" Command="{Binding TaskPageCommand}"  />
                 <Button Content="Ideas" Margin="5" Height="45" Width="100" Command="{Binding IdeaPageCommand}"  />
-                <Button Command="{Binding TaskPageCommand}" Background="Transparent" Height="47">
-                    <Image Width="46" Height="29" Source="D:\programm\LIST-To-Do\plus.png"  />
-                </Button>
+                
 
 
             </StackPanel>
@@ -31,8 +35,11 @@
                 <RowDefinition Height="167*"/>
                 <RowDefinition Height="50*"/>
             </Grid.RowDefinitions>
-            <Frame Background="Gray"
-                  Content = "{Binding CurrentPage}" NavigationUIVisibility="Hidden" Grid.RowSpan="2"/>
+            <Frame  BorderThickness="0"
+                  Content = "{Binding CurrentPage}" NavigationUIVisibility="Hidden" Grid.RowSpan="2">
+                
+
+            </Frame>
         </Grid>
     </Grid>
 
