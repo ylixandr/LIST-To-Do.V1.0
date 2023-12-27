@@ -1,0 +1,1 @@
+Desktop app for personal tasks management
